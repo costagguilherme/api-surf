@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Exceptions\SurfistaNotFoundException;
+use App\Http\Requests\StoreSurfistaRequest;
 use App\Http\Resources\SurfistaResource;
 use App\Repositories\Interfaces\ISurfistaRepository;
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class SurfistaController extends Controller
@@ -18,7 +17,7 @@ class SurfistaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreSurfistaRequest $request)
     {
         $surfista = $this->surfistaRepository->create($request->all());
         return new SurfistaResource($surfista);
