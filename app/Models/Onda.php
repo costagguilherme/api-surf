@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Onda extends Model
 {
@@ -16,4 +17,15 @@ class Onda extends Model
         'bateria_id',
         'surfista_id',
     ];
+
+    public function bateria(): HasOne
+    {
+        return $this->hasOne(Bateria::class);
+    }
+
+    public function surfists(): HasOne
+    {
+        return $this->hasOne(Surfista::class);
+    }
+
 }

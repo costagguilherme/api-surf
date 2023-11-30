@@ -26,5 +26,8 @@ Route::post('bateria', [App\Http\Controllers\BateriaController::class, 'store'])
 
 Route::post('onda', [App\Http\Controllers\OndaController::class, 'store']);
 
+Route::post('nota', [App\Http\Controllers\NotaController::class, 'store']);
+
+
 
 
