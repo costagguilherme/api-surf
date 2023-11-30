@@ -18,7 +18,7 @@ class Bateria extends Model
         'surfista_2_id',
     ];
 
-    public function bank_accounts(): HasMany
+    public function surfistas(): HasMany
     {
         return $this->hasMany(Surfista::class);
     }
