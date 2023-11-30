@@ -21,3 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('surfista', [App\Http\Controllers\SurfistaController::class, 'store']);
 Route::get('surfista', [App\Http\Controllers\SurfistaController::class, 'index']);
 
+Route::post('bateria', [App\Http\Controllers\BateriaController::class, 'store']);
+// Route::get('bateria', [App\Http\Controllers\BateriaController::class, 'index']);
+
+
