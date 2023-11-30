@@ -12,8 +12,7 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
 class BateriaController extends Controller
 {
     public function __construct(
-        private IBateriaRepository $bateriaRepository,
-        private ISurfistaRepository $surfistaRepository
+        private IBateriaRepository $bateriaRepository
     ) {
     }
 

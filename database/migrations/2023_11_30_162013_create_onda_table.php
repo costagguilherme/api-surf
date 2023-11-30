@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('onda', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('bateria_id');
-            $table->unsignedBigInteger('sufirsta_id');
+            $table->unsignedBigInteger('surfista_id');
 
             $table->foreign('bateria_id')->references('id')->on('bateria');
-            $table->foreign('sufirsta_id')->references('id')->on('surfista');
+            $table->foreign('surfista_id')->references('id')->on('surfista');
 
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('onda_tablet');
+        Schema::dropIfExists('onda');
     }
 };

@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Onda extends Model
 {
     use HasFactory;
+
+    protected $table = 'onda';
+    public $timestamps = false;
+
+    public $fillable = [
+        'bateria_id',
+        'surfista_id',
+    ];
 }

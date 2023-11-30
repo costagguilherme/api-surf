@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_nota', function (Blueprint $table) {
+        Schema::create('nota', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('onda_id');
             $table->foreign('onda_id')->references('id')->on('onda');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_nota');
+        Schema::dropIfExists('nota');
     }
 };
