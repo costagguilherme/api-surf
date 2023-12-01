@@ -23,9 +23,14 @@ class Onda extends Model
         return $this->hasOne(Bateria::class);
     }
 
-    public function surfists(): HasOne
+    public function surfista(): HasOne
     {
         return $this->hasOne(Surfista::class);
+    }
+
+    public function nota(): HasOne
+    {
+        return $this->hasOne(Nota::class);
     }
 
 }

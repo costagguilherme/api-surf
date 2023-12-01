@@ -20,4 +20,12 @@ class BateriaRepositoryEloquent extends BaseRepository implements IBateriaReposi
     {
         return Bateria::class;
     }
+
+    public function pegarOndasDoSurfistaNaBateria(int $surfista_id, int $bateria_id)
+    {
+        $ondaRepository = app(OndaRepositoryEloquent::class);
+        return $ondaRepository->where('bateria_id', $bateria_id)
+            ->where('surfista_id', $surfista_id)
+            ->with('nota')->get();
+    }
 }

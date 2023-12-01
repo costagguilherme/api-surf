@@ -21,6 +21,4 @@ class OndaRepositoryEloquent extends BaseRepository implements IOndaRepository
     {
         return Onda::class;
     }
-
-
 }

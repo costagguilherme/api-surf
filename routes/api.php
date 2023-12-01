@@ -18,11 +18,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('surfista', [App\Http\Controllers\SurfistaController::class, 'store']);
-Route::get('surfista', [App\Http\Controllers\SurfistaController::class, 'index']);
+Route::prefix('surfista')->group(function () {
+    Route::post('', [App\Http\Controllers\SurfistaController::class, 'store']);
+    Route::get('', [App\Http\Controllers\SurfistaController::class, 'index']);
+});
 
-Route::post('bateria', [App\Http\Controllers\BateriaController::class, 'store']);
-// Route::get('bateria', [App\Http\Controllers\BateriaController::class, 'index']);
+Route::prefix('bateria')->group(function () {
+    Route::post('', [App\Http\Controllers\BateriaController::class, 'store']);
+    Route::get('/{id}/vencedor', [App\Http\Controllers\BateriaController::class, 'winner']);
+});
 
 Route::post('onda', [App\Http\Controllers\OndaController::class, 'store']);
 
