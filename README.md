@@ -1,10 +1,10 @@
 
-### Instalação
+#### Instalação
 * Rodar 'composer install'
 * Configurar conexão do banco de dados (MySQL)
 * Rodar 'php artisan:migrate'
 
-### Rotas
+#### Rotas
 * POST /surfista/store
 * GET /surfista
 * POST /bateria
